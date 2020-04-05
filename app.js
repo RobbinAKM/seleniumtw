@@ -1,44 +1,51 @@
 require("chromedriver");
 const selenium = require ("selenium-webdriver");
 const  driver = new selenium.Builder().forBrowser("chrome").build();
-const url = "https://townwork.net/appInpt/?joid=Y0055J4X";
-
-
 const By = selenium.By ;
 
-const runSelenium= function(){
+const url = "https://townwork.net/appInpt/?joid=Y0055J4X";
+
+var name="kanaiya";
+var namefurikana="かにや";
+var ph="07021669796";
+var email="dd@gmail.com";
+var sex="men";
+var year="1990";
+var month="05";
+var day="22";
+var occupation="05"
+
+const runSelenium= async function(){
   //get the browser open
-  driver.get(url);
+await  driver.get(url);
 
   //name
 
-  driver.findElement(By.css("#textfield000")).sendKeys("Shanti lamichhane khadka");
+await  driver.findElement(By.css("#textfield000")).sendKeys(name);
 
   //furikana name
-  driver.findElement(By.css("#textfield001")).sendKeys("ぜんち　らみちゃるね　かだか");
+await  driver.findElement(By.css("#textfield001")).sendKeys(namefurikana);
 
   //ph
-  driver.findElement(By.css("#textfield002")).sendKeys("07075251093");
+await  driver.findElement(By.css("#textfield002")).sendKeys(ph);
 
   //email
-  driver.findElement(By.css("#jsi-mailaddress")).sendKeys("khadkahom61@gmail.com");
+await driver.findElement(By.css("#jsi-mailaddress")).sendKeys(email);
 
   //birthday date
-  driver.findElement(By.xpath("//select[@id='jsi-date-birth-year']//option[@value='1997']")).click();
-  driver.findElement(By.xpath("//select[@id='selectfield001']//option[@value='07']")).click();
-  driver.findElement(By.xpath("//select[@id='selectfield002']//option[@value='12']")).click();
+await driver.findElement(By.xpath(`//select[@id='jsi-date-birth-year']//option[@value=${year}]`)).click();
+await driver.findElement(By.xpath(`//select[@id='selectfield001']//option[@value=${month}]`)).click();
+await driver.findElement(By.xpath(`//select[@id='selectfield002']//option[@value=${day}]`)).click();
 
   //sex
   //driver.findElement(By.xpath("//li//label[@for='men']")).click();
-  driver.findElement(By.xpath("//li//label[@for='women']")).click();
+await  driver.findElement(By.xpath(`//li//label[@for="${sex}"]`)).click();
 
 
   //current occupation
-  driver.findElement(By.xpath("//select[@id='selectfield003']//option[@value='09']")).click();
+await  driver.findElement(By.xpath(`//select[@id='selectfield003']//option[@value=${occupation}]`)).click();
 
-
-
-  driver.findElement(By.xpath("//input[@type='submit']")).submit();
+await  driver.findElement(By.xpath("//input[@type='submit']")).submit();
 
 };
 
