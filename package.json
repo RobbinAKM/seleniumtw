@@ -1,0 +1,23 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "selenium project for automation",
+  "author": "Robbin",
+  "private": true,
+  "scripts": {
+    "start": "node ./app"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "router": "^1.3.5"
+  },
+  "license": "MIT",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobbinAKM/user-authentication-.git"
+  }
+}
