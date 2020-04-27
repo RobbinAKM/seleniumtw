@@ -5,8 +5,8 @@ const By = selenium.By ;
 
 const url = "https://townwork.net/appInpt/?joid=Y0055J4X";
 
-var name="kanaiya";
-var namefurikana="かにや";
+var name=document.getElementById("name").value;
+var namefurikana=document.getElementById("nameHirakana").value;
 var ph="07021669796";
 var email="dd@gmail.com";
 var sex="men";

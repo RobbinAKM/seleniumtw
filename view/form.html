@@ -8,16 +8,18 @@
 </head>
 
 <body>
+<img src="ndb.jpg" alt="ndb-logo">
+  <div class="form-style-2">
   <form>
-  <p>
-කෙටි නම：<input type="text" name="name" size="40">
-  </p>
-  <p>
-  හිරගනා වලින් කෙටි නම：<input type="text" name="name" size="40">
-  </p>
-  <p>උපන් දිනය</p>
-  <p>year
-    <select>
+  <label for="field1"><span>
+කෙටි නම：<span class="required">*</span></span><input type="text"  class="input-field" name="field1">
+  </label>
+  <label for="field2"><span>
+  හිරගනා වලින් කෙටි නම <span class="required">*</span></span><input type="text"  class="input-field" name="field2">
+  </label>
+   <div class="form-style-2-heading2">උපන් දිනය<span class="required">*</span></div><br>
+  <label for="field4"><span>year</span>
+    <select name="field4" class="select-field">
       <option value="null">Year</option>
       <option value="1900">1900</option>
       <option value="1901">1901</option>
@@ -125,9 +127,9 @@
       <option value="2003">2003</option>
       <option value="2004">2004</option>
       </select>
-  </p>
-  <p>Month
-    <select>
+  </label>
+  <label for="field4"><span>Month</span>
+    <select name="field4" class="select-field">
       <option value="null">Month</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -142,9 +144,9 @@
       <option value="11">11</option>
       <option value="12">12</option>
       </select>
-  </p>
-  <p>Day
-    <select>
+  </label>
+  <label for="field4"><span>Day</span>
+    <select name="field4" class="select-field">
       <option value="null">Day</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -178,17 +180,18 @@
       <option value="30">30</option>
       <option value="31">31</option>
       </select>
-  </p>
-  <p>
-ස්ත්රී පුරුෂ භාවය：<input type="radio" name="sex" value="male">පිරිමි
-
-  <input type="radio" name="sex" value="female">ගැහැණු
-  </p>
-  <p>
-දුරකථන：<input type="text" name="name" size="40">
-  </p>
-  <p>රැකියාව
-  <select>
+  </label>
+  <label for="field5"><span>ස්ත්රී පුරුෂ භාවය：<span class="required">*</span></span>
+<select name="field5" class="select-field">
+  <option value="male">පිරිමි</option>
+  <option value="female">ගැහැණු</option>
+</select>
+  </label>
+  <label for="field6"><span>
+දුරකථන：<span class="required">*</span></span><input type="text" class="input-field" name="field6">
+  </label>
+  <label for="field7"><span>රැකියාව<span class="required">*</span></span>
+  <select name="field7" class="select-field">
 <option>කරුණාකර තෝරන්න</option>
 <option value="01">උසස් පාසැල</option>
 <option value="02">විශ්ව විද්‍යාල ශිෂ්‍යයා</option>
@@ -203,16 +206,16 @@
 <option value="11">වෙනත්</option>
 
   </select>
-  </p>
-  <p>
-විද්යුත් තැපෑල：<input type="text" name="name" size="40">
-  </p>
+  </label>
+  <label for="field8"><span>
+විද්යුත් තැපෑල：<span class="required">*</span></span><input type="text"  class="input-field" name="field8">
+  </label>
 
 
-  <p>
-  <input type="submit" value="送信"><input type="reset" value="リセット">
-  </p>
-  </form>
+</form>
+<label><span> </span><input type="submit" value="Submit" /></label>
+
+</div>
 
 </body>
 
